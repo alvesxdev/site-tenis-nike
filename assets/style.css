@@ -590,7 +590,7 @@ header {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 755px) {
   .container-img {
     display: none;
   }
