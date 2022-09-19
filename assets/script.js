@@ -30,33 +30,33 @@ setInterval (next, 8000)
 
 //SCROLL ANIMAÇÃO//
 
-const sr = ScrollReveal({
-    distance: '60px',
-    duration: 1900,
-    reset: true,
-});
+// const sr = ScrollReveal({
+//     distance: '60px',
+//     duration: 1900,
+//     reset: true,
+// });
 
 
- sr.reveal(`.content-home`, {
-     origin: 'left',
-     interval: 200,
-})
+//  sr.reveal(`.content-home`, {
+//      origin: 'left',
+//      interval: 200,
+// })
 
 
-sr.reveal(`.content-card`, {
-    origin: 'right'
-})
+// sr.reveal(`.content-card`, {
+//     origin: 'right'
+// })
 
-sr.reveal(`.container-text`, {
-    origin: 'left'
-})
+// sr.reveal(`.container-text`, {
+//     origin: 'left'
+// })
 
-sr.reveal(`.container-img`, {
-    origin: 'right'
-})
+// sr.reveal(`.container-img`, {
+//     origin: 'right'
+// })
 
-sr.reveal(`.content-contato`, {
-    origin: 'bottom'
-})
+// sr.reveal(`.content-contato`, {
+//     origin: 'bottom'
+// })
 
 
