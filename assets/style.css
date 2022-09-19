@@ -102,6 +102,96 @@ header {
   background-color: rgba(119, 119, 119, 0.089);
 }
 
+
+@media(max-width: 1300px) {
+  .menu-section nav {
+      display: none;
+  }
+
+  .btn-creat {
+    display: none;
+  }
+  .one,
+  .two,
+  .three {
+      background-color: white;
+      height: 3px;
+      width: 100%;
+      margin: 5px auto;
+      border-radius: 5px;
+      transition-duration: 0.3s;
+  }
+
+  .menu-burguer {
+      width: 35px;
+      height: 30px;
+  }
+
+  .menu-section.on {
+      position: absolute;
+      background: linear-gradient(90deg, #000000 0%, #0f0f0f 100%);
+      top: 0;
+      left: 0;
+      transform: translate(-50, -50%);
+      padding-top: 50px;
+      width: 40vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      z-index: 10;
+  }
+
+  .menu-section.on nav {
+      display: block;
+  }
+
+  .menu-section.on .btn-creat {
+    display: block;
+  }
+
+  .menu-section.on .menu-burguer {
+      position: absolute;
+      right: 35px;
+      top: 35px;
+  }
+
+  .menu-section.on .menu-burguer .one {
+      transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .menu-section.on .menu-burguer .two {
+      opacity: 0;
+  }
+
+  .menu-section.on .menu-burguer .three {
+      transform: rotate(-45deg) translate(5px, -4px);
+  }
+
+  .menu-section.on nav ul {
+      display: block;
+      text-align: center;
+  }
+
+  .menu-section.on nav ul li a {
+      transition-duration: 0.3s;
+      font-size: 2rem;
+      margin-left: 0;
+      line-height: 6rem;
+      
+  }
+
+}
+
+@media(max-width: 650px) {
+  .menu-section.on {
+    width: 100%;
+      height: 100vh;
+  }
+}
+
+
 /* //SLIDES MAIN// */
 
 .container {
@@ -203,7 +293,7 @@ header {
   transform: scale(1.1);
 }
 
-main #prev,
+ #prev,
 #next {
   position: absolute;
   top: 50%;
@@ -230,6 +320,37 @@ main #prev,
   border-radius: 50%;
   background: url(imagens/setad.png) no-repeat center;
 }
+
+ @media (max-width: 1300px) {
+  .slide-container.active {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+  .slide {
+    width: 100%;
+  }
+
+  .img-slide {
+    width: 100%;
+  }
+
+.content-home {
+  height: 100%;
+}
+
+.content-slide {
+  left: 10%;
+}
+
+ #prev,
+  #next {
+    display: none;
+  }
+
+} 
 
 /* //CARDS DE SEVIÇOS// */
 
@@ -342,6 +463,31 @@ main #prev,
   width: 100%;
 }
 
+
+@media (max-width: 950px) {
+  .content-card {
+    display: flex;
+    flex-direction: column;
+}
+.img-card {
+  display: none;
+}
+
+.cards {
+  width: 70%;
+} 
+
+.container-text {
+  width: 80%;
+  margin: auto;
+}
+
+.title {
+  padding-top: 0;
+}
+
+}
+
 /* //CONTEUDO SOBRE// */
 
 .content-sobre {
@@ -354,9 +500,6 @@ main #prev,
 
 .container-text * {
   font-family: "Inter";
-}
-.container-text {
-  padding-right: 25px;
 }
 
 .text {
@@ -432,6 +575,33 @@ main #prev,
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 1150px) {
+  .content-sobre {
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 45px;
+    max-width: 80%;
+  }
+
+  .container-img {
+    width: auto;
+    margin: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .container-img {
+    display: none;
+  }
+
+  .content-sobre {
+    width: 100%;
+    height: 40%;
+  }
+}
+
+
 /* //CONTATO CONTENT// */
 .content-contato {
   width: 70%;
@@ -477,7 +647,7 @@ form {
   padding: 5px 0;
   background: none;
   border: none;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   color: #fff;
@@ -507,13 +677,14 @@ form button {
   font-size: 1.3rem;
   border: none;
   border-radius: 50px;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 form button:hover {
   transform: scale(1.1);
   opacity: 80%;
 }
+
 
 /* //PARTE DE TRÁS CONTATO// */
 
@@ -562,4 +733,160 @@ form button:hover {
   display: flex;
   justify-content: space-evenly;
   gap: 10px;
+}
+
+@media (max-width: 1150px) {
+  .content-contato {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .content-input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  form button {
+    width: 60%;
+  }
+
+  .input-label input::placeholder {
+    font-size: .9rem;
+  }
+}
+
+
+/* //FOOTER// */
+
+footer {
+  width: 100%;
+  display: flex;
+  background: linear-gradient(
+    106deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(196, 196, 196, 1) 100%
+  );
+}
+
+.card-footer {
+  width: 70%;
+  max-width: 1100px;
+  display: flex;
+  margin: auto;
+}
+
+.card-footer {
+  width: 70%;
+  max-width: 1100px;
+  display: flex;
+  margin: auto;
+}
+
+.cards-footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 30px;
+}
+
+.cards-footer h3 {
+  font-family: "Inter", sans-serif;
+  color: #6300aa;
+  margin-bottom: 20px;
+}
+
+.cards-footer ul {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.cards-footer ul li a {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+
+  color: #420072;
+  text-decoration: none;
+}
+
+.cards-footer ul li {
+  transition: 0.4s;
+}
+
+.input-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cards-footer ul li:hover {
+  transform: translateX(5%);
+  opacity: 90%;
+}
+
+.input-footer label {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+
+  color: #420072;
+}
+
+.input-footer input {
+  padding: 10px 10px;
+  border: none;
+  border: 2.5px solid #6300aa;
+  background: none;
+
+  color: #420072;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.input-footer input::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #420072;
+}
+
+.btn-footer {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.btn-footer button {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  background-color: #6300aa;
+
+  color: #ffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.social-footer {
+  width: 100%;
+  display: flex;
+  margin-top: 15px;
+}
+
+.social-footer ul {
+  display: flex;
+  width: 100%;
+  gap: 35px;
+}
+
+
+@media (max-width: 970px) {
+  .card-footer {
+    display: flex;
+    flex-direction: column;
+  }
 }
