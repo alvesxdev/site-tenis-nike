@@ -1,0 +1,48 @@
+@media(max-width: 1210px) {
+    #prev,
+    #next {
+        border: none;
+        top: 40%;
+    }
+}
+
+@media(max-width: 1008px) {
+    .img-slide {
+        width: 100%;
+    }
+
+    .img-slide img {
+        width: 100%;
+    }
+
+    #home {
+        height: 70vh;
+    }
+} 
+
+@media(max-width: 844px) {
+    .img-slide {
+        width: 100%;
+    }
+
+    .img-slide img {
+        width: 100%;
+    }
+
+    #prev,
+    #next {
+        display: none;
+    }
+}
+
+@media(max-width: 650px) {
+    #home {
+        height: 80vh;
+    }
+
+    .slide {
+        margin-top: 20%;
+        display: flex;
+    }
+
+}

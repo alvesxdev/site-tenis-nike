@@ -1,3 +1,5 @@
+// function slides
+
 let slide = document.querySelectorAll(".slide-container");
 let index = 0;
 
@@ -10,6 +12,8 @@ function next() {
   slide[index].classList.add("active");
 }
 
+// left button next slide
+
 leftButton.addEventListener("click", () => {
   next();
 });
@@ -20,13 +24,15 @@ function prev() {
   slide[index].classList.add("active");
 }
 
+// rigth button prev slide
+
 rigthButton.addEventListener("click", () => {
   prev();
 });
 
 setInterval(next, 8000);
 
-//MENU HAMBURGUER//
+//MENU HAMBURGUER
 
 let show = true
 
@@ -38,7 +44,7 @@ menuBurguer.addEventListener("click", () => {
     show = !show
 })
 
-//SCROLL ANIMAÇÃO//
+//SCROLL ANIMATION 
 
 const sr = ScrollReveal({
   distance: "60px",

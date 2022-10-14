@@ -1,0 +1,38 @@
+@media(max-width: 1171px) {
+    .content-sobre {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .container-img {
+        background: none;
+        margin: auto;
+        width: auto;
+    }
+
+}
+
+@media(max-width: 620px) {
+    .container-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-img img {
+        width: 80%;
+        
+    }
+     .container-img h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+}
+
+@media(max-width: 584px) {
+    .container-img {
+        display: none;
+    }
+}

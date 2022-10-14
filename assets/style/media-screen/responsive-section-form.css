@@ -1,0 +1,16 @@
+@media(max-width: 1240px) {
+    .content-contato {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .content-input {
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 956px) {
+    .content-connect h1 {
+        margin-bottom: 25px;
+    }
+}

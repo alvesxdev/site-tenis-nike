@@ -1,25 +1,23 @@
+/* // CONFIGS HEADER // */
+
 header {
   width: 100%;
-  background: linear-gradient(90deg, #000000 0%, #0f0f0f 100%);
+  background: var(--color-bg-dark);
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   max-height: 80px;
 }
 
+/* // CONTAINER HEADER // */
+
 .container-menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   max-width: 1100px;
   height: 80px;
   width: 70%;
   margin: auto;
-}
-
-.container-menu h1 {
-  color: #ffff;
-  font-family: "Inter", sans-serif;
-  font-size: 1.5rem;
 }
 
 .menu-section {
@@ -31,9 +29,11 @@ header {
   gap: 15px;
 }
 
+/* // OPTIONS HEADER //  */
+
 .menu-section nav a {
-  color: #ffff;
-  font-family: "Inter", sans-serif;
+  color: var(--color-text-p);
+  font-family: var(--inter-m);
   font-weight: 500;
   font-size: 1.2rem;
   padding: 8px;
@@ -56,11 +56,7 @@ header {
   content: "";
   width: 50px;
   height: 5px;
-  background: linear-gradient(
-    97deg,
-    rgba(82, 0, 180, 1) 0%,
-    rgba(140, 0, 255, 1) 100%
-  );
+  background: var(--linear-purple1);
   position: absolute;
   border-radius: 30px;
   top: 108%;
@@ -69,42 +65,8 @@ header {
   transition: all 0.7s cubic-bezier(0.79, 0.77, 0.6, 1.03) 0s;
 }
 
-.btn-creat {
-  display: flex;
-  justify-content: space-between;
-}
 
-.creat-ac {
-  color: #ffff;
-  text-decoration: none;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  padding: 7px 18px;
-  transition: 0.4s;
-}
-
-.creat-ac:hover {
-  color: rgb(192, 192, 192);
-}
-
-.login-btn {
-  color: #ffff;
-  text-decoration: none;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  padding: 7px 18px;
-  border: 2px solid rgb(136, 0, 214);
-  border-radius: 30px;
-  transition: 0.4s;
-}
-
-.login-btn:hover {
-  background-color: rgba(119, 119, 119, 0.089);
-}
-
-
-
-/* //SLIDES MAIN// */
+/* //SLIDES TENIS// */
 
 .container {
   width: 100%;
@@ -116,7 +78,6 @@ header {
 .slide-container {
   display: flex;
   margin: auto;
-  /* background-color: red; */
   width: 70%;
   max-width: 1100px;
   padding-top: 15%;
@@ -137,6 +98,8 @@ header {
 .slide-container.active {
   display: block;
 }
+
+/* // IMAGE SLIDE // */
 
 .img-slide {
   display: flex;
@@ -166,33 +129,35 @@ header {
   width: auto;
 }
 
+/* // PRICE SLIDE // */
+
 .content-slide h1 {
-  font-weight: 600;
-  color: #ffff;
+  font-family: var(--inter-b);
+  color: var(--color-text-p);
   transition: all 0.5s cubic-bezier(0.5, 0.61, 0, 0.89);
+  cursor: pointer;
 }
 
 .content-slide h1:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
+/* // DESCRIPTION TENIS // */
+
 .content-slide p {
-  color: #ffff;
-  font-weight: 500;
+  color: var(--color-text-p);
   line-height: 25px;
   margin-top: 10px;
 }
 
+/* // BUTTON SLIDE // */
+
 .content-slide a {
-  color: #ffff;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-family: var(--inter-m);
+  color: var(--color-text-p);
   margin-top: 15px;
-  background: linear-gradient(
-    90deg,
-    rgba(67, 0, 120, 1) 0%,
-    rgba(96, 0, 255, 1) 100%
-  );
+  background: var(--linear-purple1);
   width: 55%;
   padding: 8px;
   text-align: center;
@@ -205,7 +170,7 @@ header {
   transform: scale(1.1);
 }
 
- #prev,
+#prev,
 #next {
   position: absolute;
   top: 50%;
@@ -223,18 +188,18 @@ header {
   left: 0px;
   margin-left: 30px;
   border-radius: 50%;
-  background: url(imagens/setae.png) no-repeat center;
+  background: url(../imagens/setae.png) no-repeat center;
 }
 
 #next {
   right: 0;
   margin-right: 30px;
   border-radius: 50%;
-  background: url(imagens/setad.png) no-repeat center;
+  background: url(../imagens/setad.png) no-repeat center;
 }
 
 
-/* //CARDS DE SEVIÇOS// */
+/* //SECTION SERVICES // */
 
 .title {
   display: flex;
@@ -243,10 +208,12 @@ header {
 }
 
 .title h1 {
-  color: #ffff;
+  color: var(--color-text-p);
   font-size: 3rem;
-  font-family: "Inter", sans-serif;
+  font-family: var(--mont-m);
 }
+
+/* // CARDS // */
 
 .content-card {
   width: 80%;
@@ -278,7 +245,6 @@ header {
 
 .cards:hover::before {
   opacity: 1;
-  /* background-color: rgb(255, 255, 255); */
 }
 
 .cards::before {
@@ -286,15 +252,11 @@ header {
   content: "";
   width: 135px;
   height: 135px;
-  background: linear-gradient(
-    97deg,
-    rgba(82, 0, 180, 1) 0%,
-    rgba(140, 0, 255, 1) 100%
-  );
+  background: var(--linear-purple1);
   position: absolute;
   z-index: -1;
   border-radius: 50%;
-  top: 24%;
+  top: 23%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.7s cubic-bezier(0.79, 0.77, 0.6, 1.03) 0s;
@@ -304,17 +266,18 @@ header {
   transform: translateY(-10%);
 }
 
+/* // TILTE CARDS // */
+
 .cards h1 {
   padding-bottom: 35px;
   display: flex;
   justify-content: center;
 
-  font-family: "Inter", sans-serif;
+  font-family: var(--inter-b);
   font-weight: 700;
   font-size: 1.7rem;
   font-style: bold;
-  color: rgb(255, 255, 255);
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  color: var(--color-text-p);
 }
 
 .cards ul {
@@ -326,11 +289,13 @@ header {
   list-style: none;
 }
 
+/* // DESCRIPTION CARD // */
+
 .cards p {
-  color: #ffff;
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
+  color: var(--color-text-p);
+  font-family: var(--inter-m);
+  font-weight: 300;
+  font-size: clamp(.5rem, .9rem, 1rem); 
   text-align: center;
 }
 
@@ -346,19 +311,15 @@ header {
 }
 
 
-/* //CONTEUDO SOBRE// */
+/* // CONTENT ABOUT// */
 
 .content-sobre {
   max-width: 1100px;
   width: 70%;
-  /* background-color: blue; */
   display: flex;
   margin: auto;
 }
 
-.container-text * {
-  font-family: "Inter";
-}
 
 .text {
   display: grid;
@@ -366,22 +327,30 @@ header {
   max-width: 90%;
 }
 
+/* // TITLE ABOUT // */
+
 .text h1 {
+  font-family: var(--inter-m);
   font-size: 3rem;
   color: #ffff;
-  letter-spacing: 3px;
 }
 
+/* // SUB TITLE ABOUT // */
+
 .text h2 {
+  font-family: var(--mont-m);
   font-size: 1rem;
   color: #8000ff;
 }
 
 .text p {
+  font-family: var(--mont-m);
   font-size: 1rem;
   color: #ffff;
   font-weight: 500;
 }
+
+/* // BUTTON ABOUT INSTAGRAM // */
 
 .btn-insta {
   max-width: 150px;
@@ -390,7 +359,7 @@ header {
   gap: 10px;
   padding: 10px 0;
   border-radius: 50px;
-  border: 2px solid #8000ff;
+  border: 2px solid var(--color-primary);
   margin-top: 35px;
   cursor: pointer;
   transition: 0.4s;
@@ -401,17 +370,18 @@ header {
   background-color: rgba(255, 255, 255, 0.014);
 }
 
+/* // TEXT BUTTON // */
+
 .btn-insta p {
-  color: #ffff;
+  font-family: var(--inter-b);
+  color: var(--color-text-p);
   font-weight: 400;
 }
 
+/* // CONTAINER IMAGE ABOUT // */
+
 .container-img {
-  background: linear-gradient(
-    138deg,
-    rgba(143, 0, 255, 1) 0%,
-    rgba(46, 0, 66, 1) 100%
-  );
+  background: var(--linear-purple1);
 
   padding: 40px 35px;
   position: relative;
@@ -423,8 +393,8 @@ header {
 }
 
 .container-img h3 {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
+  font-family: var(--inter-b);
+  font-weight: 600;
   font-size: 3rem;
   color: #ffff;
   position: absolute;
@@ -435,7 +405,8 @@ header {
 
 
 
-/* //CONTATO CONTENT// */
+/* // CONTENT CONTACT // */
+
 .content-contato {
   width: 70%;
   max-width: 1100px;
@@ -444,13 +415,11 @@ header {
   margin: auto;
 }
 
+/* // CONTAINER INPUTS // */
+
 .content-input {
   width: 90%;
-  background: linear-gradient(
-    138deg,
-    rgba(143, 0, 255, 1) 0%,
-    rgba(46, 0, 66, 1) 100%
-  );
+  background: var(--linear-purple1);
   display: flex;
   padding: 25px;
   display: flex;
@@ -458,12 +427,14 @@ header {
 }
 
 .content-input h1 {
-  color: #ffff;
-  font-family: "Inter", sans-serif;
+  color: var(--color-text-p);
+  font-family: var(--inter-m);
   font-size: 2.3rem;
   padding-top: 30px;
   text-align: center;
 }
+
+/* // INPUTS CONTACT // */
 
 form {
   width: 80%;
@@ -480,20 +451,22 @@ form {
   padding: 5px 0;
   background: none;
   border: none;
-  font-family: "Inter", sans-serif;
+  font-family: var(--inter-m);
   font-weight: 500;
   font-size: 1rem;
-  color: #fff;
-  border-bottom: 2px solid rgb(255, 255, 255);
+  border-bottom: 2px solid var(--color-text-p);
   outline: none;
 }
 
 .input-label input::placeholder {
-  color: #ffff;
+  color: var(--color-text-p);
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 1.2rem;
+  padding-left: 10px;
 }
+
+/* // BUTTON FORM CONTACT // */
 
 form button {
   background: none;
@@ -519,29 +492,29 @@ form button:hover {
 }
 
 
-/* //PARTE DE TRÁS CONTATO// */
+/* // SOCIAL CONTACT // */
 
 .content-connect {
   width: 100%;
   height: 75%;
   display: flex;
-  background: linear-gradient(
-    106deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(196, 196, 196, 1) 100%
-  );
+  background: var(--color-bg-white);
   flex-direction: column;
   justify-content: space-between;
   margin: auto;
 }
 
+/* // TITLE SOCIAIS // */
+
 .content-connect h1 {
-  color: #40006d;
-  font-family: "Inter", sans-serif;
+  color: var(--color-purple1);
+  font-family: var(--inter-m);
   font-size: 2rem;
   margin: auto;
-  margin: 45px;
+  margin-top: 15px;
 }
+
+/* // SOCIAL LIST // */
 
 .list-social {
   display: flex;
@@ -558,7 +531,7 @@ form button:hover {
 }
 
 .list-social ul li {
-  color: #40006d;
+  color: var(--color-purple1);
   text-align: center;
   font-family: "Inter", sans-serif;
   font-weight: 600;
@@ -570,16 +543,12 @@ form button:hover {
 
 
 
-/* //FOOTER// */
+/* //FOOTER SITE // */
 
 footer {
   width: 100%;
   display: flex;
-  background: linear-gradient(
-    106deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(196, 196, 196, 1) 100%
-  );
+  background:var(--color-bg-white);
 }
 
 .card-footer {
@@ -606,8 +575,8 @@ footer {
 }
 
 .cards-footer h3 {
-  font-family: "Inter", sans-serif;
-  color: #6300aa;
+  font-family: var(--inter-m);
+  color: var(--color-primary);
   margin-bottom: 20px;
 }
 
@@ -618,10 +587,10 @@ footer {
 }
 
 .cards-footer ul li a {
-  font-family: "Inter", sans-serif;
+  font-family: var(--inter-m);
   font-weight: 500;
 
-  color: #420072;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -641,29 +610,29 @@ footer {
 }
 
 .input-footer label {
-  font-family: "Inter", sans-serif;
+  font-family: var(--inter-m);
   font-weight: 700;
   font-size: 1.3rem;
 
-  color: #420072;
+  color: var(--color-primary);
 }
 
 .input-footer input {
   padding: 10px 10px;
   border: none;
-  border: 2.5px solid #6300aa;
+  border: 2.5px solid var(--color-primary);
   background: none;
 
-  color: #420072;
+  color: var(--color-primary);
   font-size: 1rem;
   font-weight: 500;
 }
 
 .input-footer input::placeholder {
-  font-family: "Inter", sans-serif;
+  font-family: var(--inter-m);
   font-size: 1rem;
   font-weight: 500;
-  color: #420072;
+  color: var(--color-primary);
 }
 
 .btn-footer {
@@ -675,8 +644,7 @@ footer {
   width: 100%;
   padding: 10px 0;
   border: none;
-  background-color: #6300aa;
-
+  background-color: var(--color-primary);
   color: #ffff;
   font-family: "Inter", sans-serif;
   font-weight: 600;
