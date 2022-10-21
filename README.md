@@ -6,8 +6,6 @@
 
 Projeto construido com intuito de mostrar um pouco mais sobre meu trabalho!
 
-[Clique aqui para acessar](https://henryzxp1dev.github.io/site-tenis-nike/)
-
 ## Tecnologias
 
 - HTML
